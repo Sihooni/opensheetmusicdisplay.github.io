@@ -28,7 +28,7 @@ OSMD is able to display a simple cursor. You can control the visibility of the c
 <body>
 <h3 class="centered" id="header"> <img alt="OSMD logo" src="https://opensheetmusicdisplay.org/wp-content/uploads/sites/2/2021/02/OSMD_logo_box.svg" height="60"/> OpenSheetMusicDisplay Demo </h3>
 <div class="button group">
-  <div class="control-container">
+  <div class="control-container" style="display: none">
     <h4 class="centered">Cursor</h4>
     <input type="button" value="Show" id="show-cursor-btn" class="btn btn-demo"/>
     <input type="button" value="Hide" id="hide-cursor-btn" class="btn btn-demo"/>
@@ -43,7 +43,7 @@ OSMD is able to display a simple cursor. You can control the visibility of the c
     <p id="zoom-str">100</p>
   </div>
   <div class="control-container">
-    <h3 class="ui header">Transpose by Semitone(s):</h3>
+    <h3 class="centered">Transpose by Semitone(s):</h3>
     <div class="ui action input">
         <input type="number" id="transpose" value="0"/>
         <button class="ui button" id="transpose-btn">Transpose</button>
