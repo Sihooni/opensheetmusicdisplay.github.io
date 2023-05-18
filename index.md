@@ -1,7 +1,7 @@
 ---
 title: OpenSheetMusicDisplay
 layout: default
-subtitle: The first JavaScript engine for MusicXML using VexFlow.
+subtitle: The very second JavaScript engine for MusicXML using VexFlow.
 ---
 
 ## About OpenSheetMusicDisplay
