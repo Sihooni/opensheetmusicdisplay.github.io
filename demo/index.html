@@ -21,10 +21,11 @@ You control the zoom level of the music sheet displayed. Right now, OSMD is rend
 OSMD is able to display a simple cursor. You can control the visibility of the cursor and navigate through the piece using the following controls. You can also use the right arrow key to step through the piece. -->
 
 <!-- Include the Select2 CSS and JavaScript files -->
+<head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/css/select2.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
-
-
+</head>
+<body>
 <h3 class="centered" id="header"> <img alt="OSMD logo" src="https://opensheetmusicdisplay.org/wp-content/uploads/sites/2/2021/02/OSMD_logo_box.svg" height="60"/> OpenSheetMusicDisplay Demo </h3>
 <div class="button group">
   <div class="control-container">
@@ -54,6 +55,13 @@ OSMD is able to display a simple cursor. You can control the visibility of the c
   <div class="control-container">
     <h4 class="centered">Select score</h4>
     <select id="selectSample" class="btn btn-demo"></select>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#selectSample').select2();
+        });
+    </script>
     <h4 class="centered">Or just drop your MusicXML on this page.</h4>
   </div>
 </div>
@@ -61,11 +69,4 @@ OSMD is able to display a simple cursor. You can control the visibility of the c
   <div id="error-td"></div>
 </div>
 <div class="demo-canvas" id="osmd-demo-canvas"></div>
-
-<script>
-  // Initialize Select2 on the select element
-  $(document).ready(function() {
-    $('#selectSample').select2();
-  });
-</script>
 
