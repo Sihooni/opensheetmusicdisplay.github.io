@@ -49,7 +49,7 @@ OSMD is able to display a simple cursor. You can control the visibility of the c
   <div class="control-container">
     <h4 class="centered">Select score</h4>
     <select id="selectSample" class="btn btn-demo"></select>
-    <h4 class="centered">Or just drop your own MusicXML on this page.</h4>
+    <h4 class="centered">Or just drop your MusicXML on this page.</h4>
   </div>
 </div>
 <div id="error-tr" class="error-container">
