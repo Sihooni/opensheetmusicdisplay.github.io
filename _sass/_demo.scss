@@ -43,7 +43,7 @@ select.btn.btn-demo {
 .button.group {
   font-size: 1.0rem;
   display: grid;
-  grid-template-columns: repeat(var(--num-cols), auto);
+  flex-wrap: wrap;
   justify-content: center;
 }
 
