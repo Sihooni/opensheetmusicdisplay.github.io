@@ -26,7 +26,7 @@ OSMD is able to display a simple cursor. You can control the visibility of the c
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
 </head>
 <body>
-<h3 class="centered" id="header"> <img alt="OSMD logo" src="https://opensheetmusicdisplay.org/wp-content/uploads/sites/2/2021/02/OSMD_logo_box.svg" height="60"/> OpenSheetMusicDisplay Demo </h3>
+<h3 class="centered" id="header"> <img alt="OSMD logo" src="https://opensheetmusicdisplay.org/wp-content/uploads/sites/2/2021/02/OSMD_logo_box.svg" height="60"/> Score Library </h3>
 <div class="button group">
   <div class="control-container" style="display: none">
     <h4 class="centered">Cursor</h4>
@@ -36,18 +36,38 @@ OSMD is able to display a simple cursor. You can control the visibility of the c
     <input type="button" value="Next" id="next-cursor-btn" class="btn btn-demo"/>
     <input type="button" value="Reset" id="reset-cursor-btn" class="btn btn-demo"/>
   </div>
+    </div>
   <div class="control-container">
-    <h4 class="centered">Zoom</h4>
-    <input type="button" value="Zoom In" id="zoom-in-btn" class="btn btn-demo"/>
-    <input type="button" value="Zoom Out" id="zoom-out-btn" class="btn btn-demo"/>
-    <p id="zoom-str">100</p>
+    <h4 class="centered">악보를 선택하세요!</h4>
+    <select id="selectSample" class="btn btn-demo"></select>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#selectSample').select2({width: '100%',});
+        });
+    </script>
+    <h4 class="centered">혹은 MusicXmL 파일을 드래그하세요.</h4>
   </div>
   <div class="control-container">
-    <h4 class="centered">Transpose by Semitone(s):</h4>
+    <h4 class="centered">키 바꾸기(반음 단위):</h4>
     <div class="ui action input">
         <input type="number" id="transpose" value="0"/>
+        <style>  
+
+          input[type=number]::-webkit-inner-spin-button {
+              opacity: 1
+          }
+          
+        </style>
         <button class="ui button" id="transpose-btn">Transpose</button>
     </div>
+  </div>
+  <div class="control-container">
+    <h4 class="centered">Zoom</h4>
+    <input type="button" value="확대" id="zoom-in-btn" class="btn btn-demo"/>
+    <input type="button" value="축소" id="zoom-out-btn" class="btn btn-demo"/>
+    <p id="zoom-str">100</p>
   </div>
   <div class="control-container">
     <h4 class="centered">Renderer</h4>
@@ -58,19 +78,6 @@ OSMD is able to display a simple cursor. You can control the visibility of the c
     <input type="button" value="Re-Render" id="debug-re-render-btn" class="btn btn-demo"/>
     <input type="button" value="Clear" id="debug-clear-btn" class="btn btn-demo"/>
     <input type="button" value="Create PDF" id="print-pdf-btn" class="btn btn-demo"/>
-  </div>
-  <div class="control-container">
-    <h4 class="centered">Select score</h4>
-    <select id="selectSample" class="btn btn-demo"></select>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-        <script>
-        $(document).ready(function() {
-            $('#selectSample').select2({width: '100%',});
-        });
-    </script>
-    <h4 class="centered">Or just drop your MusicXML on this page.</h4>
-  </div>
 </div>
 <div id="error-tr" class="error-container">
   <div id="error-td"></div>
