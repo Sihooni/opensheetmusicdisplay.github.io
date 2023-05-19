@@ -36,7 +36,7 @@ select.btn.btn-demo {
   text-align: center;
   display: inline-block;
   vertical-align: top;
-  height: 300px;
+  height: 220px;
   overflow-y: auto;
 }
 
@@ -44,6 +44,7 @@ select.btn.btn-demo {
   font-size: 1.0rem;
   display: grid;
   grid-template-columns: repeat(var(--num-cols), auto);
+  justify-content: center;
 }
 
 .button.group h4 {
