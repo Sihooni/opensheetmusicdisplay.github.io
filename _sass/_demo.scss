@@ -35,6 +35,9 @@ select.btn.btn-demo {
   margin: 0 auto;
   text-align: center;
   display: inline-block;
+  vertical-align: top;
+  height: 300px;
+  overflow-y: auto;
 }
 
 .button.group {
