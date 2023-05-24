@@ -1,7 +1,7 @@
 ---
 layout: demo
 title: Demo
-permalink: /demo/
+permalink: /beta/
 menu: main
 order: 4
 customJS:
@@ -66,9 +66,9 @@ OSMD is able to display a simple cursor. You can control the visibility of the c
   <div class="control-container">
     <h4 class="centered">Zoom</h4>
     <h6 class="centered">모바일에서는 33%나 44% 추천</h6>
+    <p id="zoom-str">100</p>
     <input type="button" value="확대" id="zoom-in-btn" class="btn btn-demo"/>
     <input type="button" value="축소" id="zoom-out-btn" class="btn btn-demo"/>
-    <p id="zoom-str">100</p>
   </div>
   <div class="control-container">
     <h4 class="centered">Renderer</h4>
@@ -77,7 +77,7 @@ OSMD is able to display a simple cursor. You can control the visibility of the c
         <option value="canvas">Canvas</option>>
     </select>
     <input type="button" value="Re-Render" id="debug-re-render-btn" class="btn btn-demo"/>
-    <input type="button" value="Clear" id="debug-clear-btn" class="btn btn-demo"/>
+    <input type="button" value="Clear" id="debug-clear-btn" class="btn btn-demo" style="display: none"/>
     <input type="button" value="Create PDF" id="print-pdf-btn" class="btn btn-demo"/>
 </div>
 <div id="error-tr" class="error-container">
