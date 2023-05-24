@@ -1,5 +1,5 @@
 # Site settings
-title: OpenSheetMusicDisplay
+title: ScoreLibrary
 email: thomas@opensheetmusicdisplay.org
 description: The first JavaScript engine for MusicXML using VexFlow
 baseurl: ""
